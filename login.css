@@ -1,0 +1,107 @@
+:root{
+    --bg:#eef2ff;
+    --card:#ffffff;
+    --accent:#2b8cff;
+    --muted:#65748b;
+    --radius:12px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    margin:0;
+    font-family:Inter, Arial, sans-serif;
+    background:linear-gradient(180deg,var(--bg),#fff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    color:#0b1220;
+}
+
+/* center wrapper */
+.wrap{
+    width:100%;
+    max-width:420px;
+}
+
+/* card */
+.login-box{
+    background:var(--card);
+    padding:22px;
+    border-radius:var(--radius);
+    box-shadow:0 10px 30px rgba(11,18,32,0.06);
+    border:1px solid rgba(11,18,32,0.04);
+}
+
+/* header */
+.login-box h2{
+    margin:0 0 14px;
+    font-size:20px;
+    letter-spacing:0.2px;
+}
+
+/* labels & inputs */
+.login-box label{
+    display:block;
+    margin:10px 0 6px;
+    font-size:13px;
+    color:var(--muted);
+}
+.login-box input[type="text"],
+.login-box input[type="password"]{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid #e6eaf2;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+    transition:box-shadow .14s ease, border-color .14s ease, transform .08s ease;
+}
+.login-box input:focus{
+    border-color:var(--accent);
+    box-shadow:0 8px 20px rgba(43,140,255,0.12);
+    transform:translateY(-1px);
+}
+
+/* row: remember + forgot */
+.row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:10px;
+}
+.remember{ font-size:13px; color:var(--muted); }
+.remember input{ margin-right:8px; vertical-align:middle; }
+
+/* button */
+.btn{
+    display:block;
+    width:100%;
+    margin-top:16px;
+    padding:12px;
+    background:linear-gradient(180deg,var(--accent),#1670ff);
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 10px 26px rgba(34,103,255,0.14);
+    transition:transform .14s ease, box-shadow .14s ease;
+}
+.btn:hover{ transform:translateY(-3px); box-shadow:0 20px 40px rgba(34,103,255,0.18); }
+.btn:active{ transform:translateY(-1px); }
+
+/* helper text */
+.note{
+    margin:12px 0 0;
+    font-size:13px;
+    color:var(--muted);
+}
+.note a{ color:var(--accent); text-decoration:none; font-weight:600; }
+
+/* responsive */
+@media (max-width:420px){
+    .login-box{ padding:16px; border-radius:10px; }
+    .btn{ padding:11px; }
+}
